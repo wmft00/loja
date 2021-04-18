@@ -1,0 +1,10 @@
+on: push
+name: Deploy in Master
+jobs:
+  web-deploy:
+    name: Deploy
+    steps:
+      with:
+        ftp_host: ${{ secrets.FTP_HOST }}
+        ftp_username: ${{ secrets.FTP_USERNAME }}
+        ftp_password: ${{ secrets.FTP_PASSWORD }}
