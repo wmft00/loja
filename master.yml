@@ -1,10 +1,15 @@
 on: push
-name: Deploy in Master
+name: Publish on Website
 jobs:
-  web-deploy:
-    name: Deploy
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
     steps:
-      with:
-        ftp_host: ${{ secrets.FTP_HOST }}
-        ftp_username: ${{ secrets.FTP_USERNAME }}
-        ftp_password: ${{ secrets.FTP_PASSWORD }}
+    - uses: actions/checkout@master
+    - name: FTP-Deploy-Action
+      env:
+        FTP_SERVER: ${{ secrets.FTP_HOST }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        ARGS: --delete
+        # --delete arg will delete files on the server if you've deleted them in git
