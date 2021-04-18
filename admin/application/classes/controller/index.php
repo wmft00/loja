@@ -13,7 +13,7 @@ class Controller_Index extends Controller_Template {
     //NOME DA SESSÃO, PARA NÃO DAR BAGUNÇA COM OUTRA RESTRITAS E AFINS ABERTOS NO NAVEGADOR
     public $nomeSessao = "adminloja";
     //DOMÍNIO
-    public $dominio = "http://localhost/loja/admin/";
+    public $dominio = "https://lojatroc.000webhostapp.com/loja/admin/";
     //E-MAIL DE AUTENTICAÇÃO
     public $emailEmpresa = "email@email.com";
     //SENHA DO E-MAIL DE AUTENTICAÇÃO
