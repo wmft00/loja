@@ -618,3 +618,13 @@
 #11 C:\xampp\htdocs\loja\admin\system\classes\kohana\request.php(1154): Kohana_Request_Client->execute(Object(Request))
 #12 C:\xampp\htdocs\loja\admin\index.php(109): Kohana_Request->execute()
 #13 {main}
+2021-04-18 19:29:02 --- ERROR: ErrorException [ 1 ]: Maximum execution time of 120 seconds exceeded ~ SYSPATH\classes\kohana\core.php [ 957 ]
+2021-04-18 19:29:02 --- STRACE: ErrorException [ 1 ]: Maximum execution time of 120 seconds exceeded ~ SYSPATH\classes\kohana\core.php [ 957 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2021-04-18 19:29:06 --- ERROR: ErrorException [ 1 ]: Maximum execution time of 120 seconds exceeded ~ SYSPATH\classes\kohana\core.php [ 957 ]
+2021-04-18 19:29:06 --- STRACE: ErrorException [ 1 ]: Maximum execution time of 120 seconds exceeded ~ SYSPATH\classes\kohana\core.php [ 957 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}

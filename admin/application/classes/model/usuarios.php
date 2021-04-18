@@ -14,10 +14,6 @@ Class Model_Usuarios extends ORM {
             'model'       => 'permissoes',
             'foreign_key' => 'PER_ID',
         ),
-        'estabelecimentos' => array(
-            'model'       => 'estabelecimentos',
-            'foreign_key' => 'EST_ID',
-        ),
     );
     protected $_has_many = array(
         'modulosfavoritos' => array(
@@ -85,8 +81,7 @@ Class Model_Usuarios extends ORM {
             USU_DATA_CADASTRO date NOT NULL default '0000-00-00',
             PRIMARY KEY  (USU_ID),
             UNIQUE KEY USU_LOGIN (USU_LOGIN),
-            CONSTRAINT fk_usuariosper FOREIGN KEY (PER_ID) REFERENCES PERMISSOES(PER_ID) ON DELETE RESTRICT ON UPDATE RESTRICT,
-            CONSTRAINT fk_usuariosest FOREIGN KEY (EST_ID) REFERENCES ESTABELECIMENTOS(EST_ID) ON DELETE RESTRICT ON UPDATE RESTRICT
+            CONSTRAINT fk_usuariosper FOREIGN KEY (PER_ID) REFERENCES PERMISSOES(PER_ID) ON DELETE RESTRICT ON UPDATE RESTRICT
           ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;");
         
         parent::__construct($id);
@@ -95,13 +90,6 @@ Class Model_Usuarios extends ORM {
     //CHECA SE A PERMISSAO EXISTE
     public static function exists($id) {
         $results = DB::select('*')->from("PERMISSOES")->where("PER_ID", '=', $id)->execute()->as_array();
-        if(count($results) == 0)
-            return false;
-        else
-            return true;
-    }
-    public static function existsEst($id) {
-        $results = DB::select('*')->from("ESTABELECIMENTOS")->where("EST_ID", '=', $id)->execute()->as_array();
         if(count($results) == 0)
             return false;
         else

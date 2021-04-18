@@ -43,7 +43,6 @@
                         <td><?php echo $usu->USU_NOME; ?></td>
                         <td><?php echo $usu->USU_LOGIN; ?></td>
                         <td><?php echo $usu->permissoes->PER_NOME; ?></td>
-                        <td><?php if($usu->estabelecimentos->EST_NOME_FANTASIA == ""){ echo "Todos"; }else{ echo $usu->estabelecimentos->EST_NOME_FANTASIA; }; ?></td>
                         <td>
                             <a href="<?php echo url::base() ?>usuarios/edit/<?php echo $usu->USU_ID; ?>" class="btn-app-list fa fa-edit"></a>
                             <?php if($permissao == 1){ ?>
