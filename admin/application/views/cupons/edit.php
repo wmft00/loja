@@ -25,9 +25,9 @@
         <div class="form-group multiplo" label="Tipo">
             <label for="CUP_TIPO" class="col-sm-2 control-label">Tipo *</label>
             <div class="col-sm-10">
-            <input type="radio" name="CUP_TIPO" <?php if ($cupons["CUP_TIPO"] == "V") echo "checked"; ?> id="TIPOValor" value="V" validar="radio"> Valor &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="CUP_TIPO" <?php if ($cupons["CUP_TIPO"] == "V") echo "checked"; ?> id="TIPOValor" value="V" validar="radio"> Valor Fixo &nbsp;&nbsp;&nbsp;
             <!--<label for="TIPOValor" class="col-sm-2 control-label">Valor</label>-->
-            <input type="radio" name="CUP_TIPO" <?php if ($cupons["CUP_TIPO"] == "P") echo "checked"; ?> id="TIPOPorcentagem" value="P" validar="radio">  Porcentagem &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="CUP_TIPO" <?php if ($cupons["CUP_TIPO"] == "P") echo "checked"; ?> id="TIPOPorcentagem" value="P" validar="radio">  Percentual &nbsp;&nbsp;&nbsp;
             <!--<label for="TIPO Porcentagem" class="col-sm-2 control-label"> Porcentagem</label>-->
             </div>
         </div>
