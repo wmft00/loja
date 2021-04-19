@@ -49,10 +49,6 @@ Class Model_Usuarios extends ORM {
                 array('not_empty'),
                 array(array($this, 'exists'))
             ),
-            'EST_ID' => array(
-                array('not_empty'),
-                array(array($this, 'existsEst'))
-            ),
         );
     }
     

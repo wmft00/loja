@@ -96,7 +96,7 @@ class Controller_Produtos extends Controller_Index {
                 $view->imagem = "<div class='form-group'>
                         <label class='col-sm-2 control-label'>Excluir Imagem</label>
                         <input type='checkbox' id='excluirImagem' name='excluirImagem'>
-                        <img src='" . url::base() . $imagem[0] . "'>
+                        <img src='" . $this->dominio . $imagem[0] . "'>
                     </div>";
             }
             else {
@@ -178,7 +178,7 @@ class Controller_Produtos extends Controller_Index {
                     //thumb
                     $img = Image::factory(DOCROOT."upload/produtos/".$imgName);
                     $imgName = "thumb_" . $produtos->pk() . ".".$ext;
-                    $img->resize(200)->save(DOCROOT."upload/produtos/".$imgName);
+                    $img->resize(250)->save(DOCROOT."upload/produtos/".$imgName);
                 }
             } catch (ORM_Validation_Exception $e){
                 $query = false;
@@ -253,7 +253,7 @@ class Controller_Produtos extends Controller_Index {
                         //thumb
                         $img = Image::factory(DOCROOT."upload/produtos/".$imgName);
                         $imgName = "thumb_" . $produtos->pk() . ".".$ext;
-                        $img->resize(200)->save(DOCROOT."upload/produtos/".$imgName);
+                        $img->resize(250)->save(DOCROOT."upload/produtos/".$imgName);
                     }
                 } catch (ORM_Validation_Exception $e){
                     $query = false;
