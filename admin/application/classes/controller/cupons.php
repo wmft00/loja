@@ -115,13 +115,15 @@ class Controller_Cupons extends Controller_Index {
         if($this->request->post("CUP_ID") == "0" ){ 
             
             $cupons = ORM::factory("cupons");
-            
+
             //INSERE
             foreach($this->request->post() as $campo => $value){
-                if ($campo['MAR_ID'] == ''){
-                    $campo->MAR_ID = NULL;
-                } else if ($campo['CAT_ID'] == ''){
-                    $campo->CAT_ID = NULL;
+                if ($campo == 'MAR_ID'){
+                    $value = $value == '' ? NULL : $value;
+                    $cupons->$campo = $value;
+                } else if ($campo == 'CAT_ID'){
+                    $value = $value == '' ? NULL : $value;
+                    $cupons->$campo = $value;
                 } else {
                     $cupons->$campo = $value;
                 }
@@ -143,10 +145,12 @@ class Controller_Cupons extends Controller_Index {
             if ($cupons->loaded()){
                 //ALTERA
                 foreach($this->request->post() as $campo => $value){
-                    if ($campo['MAR_ID'] == ''){
-                        $campo->MAR_ID = NULL;
-                    } else if ($campo['CAT_ID'] == ''){
-                        $campo->CAT_ID = NULL;
+                    if ($campo == 'MAR_ID'){
+                        $value = $value == '' ? NULL : $value;
+                        $cupons->$campo = $value;
+                    } else if ($campo == 'CAT_ID'){
+                        $value = $value == '' ? NULL : $value;
+                        $cupons->$campo = $value;
                     } else {
                         $cupons->$campo = $value;
                     }
