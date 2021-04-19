@@ -22,9 +22,9 @@ return array
              * Ports and sockets may be appended to the hostname.
              */
             'hostname' => 'localhost',
-            'database' => 'lojatroc',
-            'username' => 'userlojatroc',
-            'password' => '~tq(|PiG@^ok!6$z',
+            'database' => 'LOJA',
+            'username' => 'root',
+            'password' => '',
             'persistent' => FALSE,
         ),
         'table_prefix' => '',

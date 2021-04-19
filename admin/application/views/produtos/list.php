@@ -57,9 +57,9 @@
                               ?>
                               <tr><td><?php echo $pro->PRO_ID; ?></td>
                                   <td><?php echo $pro->PRO_NOME; ?></td>
-                                  <td><?php echo $pro->marca->CAT_NOME; ?></td>
+                                  <td><?php echo $pro->marca->MAR_NOME; ?></td>
                                   <td><?php echo $pro->categoria->CAT_NOME; ?></td>
-                                  <td><?php echo $pro->PRO_PRECO; ?></td>
+                                  <td><?php echo number_format($pro->PRO_PRECO,2,',','.'); ?></td>
                                   <td>
                                       <a href="<?php echo url::base() ?>produtos/edit/<?php echo $pro->PRO_ID; ?>" 
                                           class="btn-app-list fa fa-edit"></a>
