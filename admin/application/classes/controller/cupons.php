@@ -118,7 +118,13 @@ class Controller_Cupons extends Controller_Index {
             
             //INSERE
             foreach($this->request->post() as $campo => $value){
-                $cupons->$campo = $value;
+                if ($campo['MAR_ID'] == ''){
+                    $campo->MAR_ID == NULL;
+                } else if ($campo['CAT_ID'] == ''){
+                    $campo->CAT_ID == NULL;
+                } else {
+                    $cupons->$campo = $value;
+                }
             }
             
             //TENTA SALVAR. SE NÃO PASSAR NA VALIDAÇÃO, VAI PRO CATCH
@@ -137,7 +143,13 @@ class Controller_Cupons extends Controller_Index {
             if ($cupons->loaded()){
                 //ALTERA
                 foreach($this->request->post() as $campo => $value){
-                    $cupons->$campo = $value;
+                    if ($campo['MAR_ID'] == ''){
+                        $campo->MAR_ID == NULL;
+                    } else if ($campo['CAT_ID'] == ''){
+                        $campo->CAT_ID == NULL;
+                    } else {
+                        $cupons->$campo = $value;
+                    }
                 }
                 
                 //TENTA SALVAR. SE NÃO PASSAR NA VALIDAÇÃO, VAI PRO CATCH
