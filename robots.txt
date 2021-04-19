@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /restrito/
+Disallow: /boletos/
+Disallow: /phpMailer/
+Disallow: /favicon.png

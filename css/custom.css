@@ -1,0 +1,46 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+/*produtos index*/
+.product-content .price-box{
+    background: #e93232 none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    float: left;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 0 5px;
+    margin-right: 5px;
+}
+
+.product-content .product-name{
+    color: #5c5c5c;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: none;
+    height: 3.5em;
+    overflow: hidden;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    float: left;
+    line-height: 25px;
+}
+
+.product-content .marca-name{
+    color: #5c5c5c;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: none;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    float: left;
+    line-height: 10px;
+    width:100%
+}
+
+.cart-list{
+    float:left;
+}

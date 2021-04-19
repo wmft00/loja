@@ -3,8 +3,6 @@
     <head>
         <title><?php echo $titulo; ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="author" content="Paulo Knob - DEZ/2012" />
-        <meta name="copyright" content="copyright (c) ows" />
         <meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1" />
 
         <link href="<?php echo url::base(); ?>css/style.css" type="text/css" rel="stylesheet" />
