@@ -86,7 +86,7 @@ if (isset($_SERVER['KOHANA_ENV'])) {
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-    'base_url' => '/loja/admin/',
+    'base_url' => '/admin/',
     'index_file' => FALSE,
     'profile' => Kohana::$environment !== Kohana::PRODUCTION,
     'caching' => Kohana::$environment === Kohana::PRODUCTION,
@@ -113,7 +113,6 @@ Kohana::modules(array(
     'pagination' => MODPATH . 'pagination', // PAGINATION
     'orm' => MODPATH . 'orm', // Object Relationship Mapping
     'image'      => MODPATH.'image',      // Image manipulation
-    'gerador' => MODPATH.'gerador',      // Gerador
         // 'unittest'   => MODPATH.'unittest',   // Unit testing
         // 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 ));
