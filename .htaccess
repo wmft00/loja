@@ -4,7 +4,7 @@ RewriteEngine On
 # Put your installation directory here:
 # If your URL is www.example.com/kohana/, use /kohana/
 # If your URL is www.example.com/, use /
-RewriteBase /admin/
+RewriteBase /
 
 # Protect application and system files from being viewed
 RewriteCond $1 ^(application|system|modules)
@@ -17,7 +17,7 @@ RewriteRule ^(.*)$ index/access_denied/$1 [PT,L]
 # - robots.txt
 # - favicon.ico
 # - Any file inside of the images/, js/, or css/ directories
-RewriteCond $1 ^(index\.php|images|js|css|bootstrap|dist|plugins|upload|boletos|online\.php)
+RewriteCond $1 ^(index\.php|favicon\.png|admin)
 
 # No rewriting
 RewriteRule ^(.*)$ - [PT,L]
@@ -26,4 +26,35 @@ RewriteRule ^(.*)$ - [PT,L]
 RewriteRule ^(.*)$ index.php/$1 [PT,L]
 
 #PAGINA DE ERRO - PROIBIDO
-ErrorDocument 403 /admin/error/
+ErrorDocument 403 /error/
+
+#DESCOMENTAR QUANDO FOR PARA O AR
+#CARREGAR MAIS RAPIDO OS ARQUIVOS
+# compress text, HTML, JavaScript, CSS, and XML
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+# remove browser bugs
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+Header append Vary User-Agent
+
+<IfModule mod_headers.c>
+	Header set Cache-Control "no-cache, no-store, must-revalidate"
+	Header set Pragma "no-cache"
+	Header set Expires 0
+</IfModule>
+
+
+#KEEP ALIVE
+#<ifModule mod_headers.c>
+ #   Header set Connection keep-alive
+#</ifModule>

@@ -1,0 +1,5 @@
+application/logs/
+application/cache/
+restrito/application/logs/
+restrito/application/cache/
+restrito/upload/

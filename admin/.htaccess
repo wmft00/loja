@@ -17,7 +17,7 @@ RewriteRule ^(.*)$ index/access_denied/$1 [PT,L]
 # - robots.txt
 # - favicon.ico
 # - Any file inside of the images/, js/, or css/ directories
-RewriteCond $1 ^(index\.php|images|js|css|bootstrap|dist|plugins|online\.php)
+RewriteCond $1 ^(index\.php|images|js|css|upload|bootstrap|dist|plugins|online\.php)
 
 # No rewriting
 RewriteRule ^(.*)$ - [PT,L]
@@ -26,4 +26,4 @@ RewriteRule ^(.*)$ - [PT,L]
 RewriteRule ^(.*)$ index.php/$1 [PT,L]
 
 #PAGINA DE ERRO - PROIBIDO
-ErrorDocument 403 /admin/error/
+ErrorDocument 403 /admin/

@@ -96,7 +96,7 @@ class Controller_Produtos extends Controller_Index {
                 $view->imagem = "<div class='form-group'>
                         <label class='col-sm-2 control-label'>Excluir Imagem</label>
                         <input type='checkbox' id='excluirImagem' name='excluirImagem'>
-                        <img src='" . $this->dominio . $imagem[0] . "'>
+                        <img src='" . url::base() . $imagem[0] . "'>
                     </div>";
             }
             else {
