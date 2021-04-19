@@ -40,7 +40,7 @@
                 <select class="form-control select2" id="CAT_ID" name="CAT_ID" validar="int" >
                     <?php foreach($categoria as $cat){ ?>
                     <option value="<?php echo $cat->CAT_ID ?>" <?php if($cat->CAT_ID == (int)$produtos["CAT_ID"]) echo "selected"; ?>>
-                        <?php echo $cat->CAT_ID ?></option>
+                        <?php echo $cat->CAT_NOME ?></option>
                     <?php } ?>
                 </select>
             </div>
