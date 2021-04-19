@@ -119,9 +119,9 @@ class Controller_Cupons extends Controller_Index {
             //INSERE
             foreach($this->request->post() as $campo => $value){
                 if ($campo['MAR_ID'] == ''){
-                    $campo->MAR_ID == NULL;
+                    $campo->MAR_ID = NULL;
                 } else if ($campo['CAT_ID'] == ''){
-                    $campo->CAT_ID == NULL;
+                    $campo->CAT_ID = NULL;
                 } else {
                     $cupons->$campo = $value;
                 }
@@ -144,9 +144,9 @@ class Controller_Cupons extends Controller_Index {
                 //ALTERA
                 foreach($this->request->post() as $campo => $value){
                     if ($campo['MAR_ID'] == ''){
-                        $campo->MAR_ID == NULL;
+                        $campo->MAR_ID = NULL;
                     } else if ($campo['CAT_ID'] == ''){
-                        $campo->CAT_ID == NULL;
+                        $campo->CAT_ID = NULL;
                     } else {
                         $cupons->$campo = $value;
                     }
