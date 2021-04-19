@@ -16,10 +16,7 @@ Class Model_Usuarios extends ORM {
         ),
     );
     protected $_has_many = array(
-        'modulosfavoritos' => array(
-            'model'       => 'modulosfavoritos',
-            'foreign_key' => 'USU_ID'
-        ),
+        
     );
     
     //REGRAS DE VALIDAÇÃO
@@ -68,7 +65,6 @@ Class Model_Usuarios extends ORM {
         //GERA A TABELA
         Database::instance()->query(Database::INSERT, "CREATE TABLE IF NOT EXISTS USUARIOS (
             USU_ID int(11) unsigned NOT NULL auto_increment,
-            EST_ID int(11) unsigned NOT NULL,
             PER_ID int(11) unsigned NOT NULL,
             USU_NOME varchar(100) NOT NULL,
             USU_EMAIL varchar(200) NOT NULL default '',
