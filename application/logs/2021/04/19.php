@@ -66,3 +66,81 @@
 #6 C:\xampp\htdocs\loja\system\classes\kohana\request.php(1154): Kohana_Request_Client->execute(Object(Request))
 #7 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
 #8 {main}
+2021-04-19 19:31:39 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+2021-04-19 19:31:39 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+--
+#0 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#1 {main}
+2021-04-19 19:32:36 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+2021-04-19 19:32:36 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+--
+#0 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#1 {main}
+2021-04-19 19:34:38 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+2021-04-19 19:34:38 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+--
+#0 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#1 {main}
+2021-04-19 19:34:48 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+2021-04-19 19:34:48 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+--
+#0 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#1 {main}
+2021-04-19 19:36:15 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+2021-04-19 19:36:15 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.png ~ SYSPATH\classes\kohana\request.php [ 1142 ]
+--
+#0 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#1 {main}
+2021-04-19 22:45:18 --- ERROR: ErrorException [ 1 ]: Uncaught TypeError: Argument 1 passed to Kohana_Kohana_Exception::handler() must be an instance of Exception, instance of Error given in C:\xampp\htdocs\loja\system\classes\kohana\kohana\exception.php:88
+Stack trace:
+#0 [internal function]: Kohana_Kohana_Exception::handler(Object(Error))
+#1 {main}
+  thrown ~ SYSPATH\classes\kohana\kohana\exception.php [ 88 ]
+2021-04-19 22:45:18 --- STRACE: ErrorException [ 1 ]: Uncaught TypeError: Argument 1 passed to Kohana_Kohana_Exception::handler() must be an instance of Exception, instance of Error given in C:\xampp\htdocs\loja\system\classes\kohana\kohana\exception.php:88
+Stack trace:
+#0 [internal function]: Kohana_Kohana_Exception::handler(Object(Error))
+#1 {main}
+  thrown ~ SYSPATH\classes\kohana\kohana\exception.php [ 88 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2021-04-19 22:47:43 --- ERROR: Error [ 0 ]: Class 'Model_Cupom' not found ~ MODPATH\orm\classes\kohana\orm.php [ 39 ]
+2021-04-19 22:47:43 --- STRACE: Error [ 0 ]: Class 'Model_Cupom' not found ~ MODPATH\orm\classes\kohana\orm.php [ 39 ]
+--
+#0 C:\xampp\htdocs\loja\application\classes\controller\ajax.php(19): Kohana_ORM::factory('Model_Cupom')
+#1 [internal function]: Controller_Ajax->action_cupons()
+#2 C:\xampp\htdocs\loja\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Ajax))
+#3 C:\xampp\htdocs\loja\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\loja\system\classes\kohana\request.php(1154): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#6 {main}
+2021-04-19 23:17:32 --- ERROR: Kohana_Exception [ 0 ]: The MAR_NOME property does not exist in the Model_Categoria class ~ MODPATH\orm\classes\kohana\orm.php [ 573 ]
+2021-04-19 23:17:32 --- STRACE: Kohana_Exception [ 0 ]: The MAR_NOME property does not exist in the Model_Categoria class ~ MODPATH\orm\classes\kohana\orm.php [ 573 ]
+--
+#0 C:\xampp\htdocs\loja\application\classes\controller\ajax.php(35): Kohana_ORM->__get('MAR_NOME')
+#1 [internal function]: Controller_Ajax->action_cupons()
+#2 C:\xampp\htdocs\loja\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Ajax))
+#3 C:\xampp\htdocs\loja\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\loja\system\classes\kohana\request.php(1154): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#6 {main}
+2021-04-19 23:17:49 --- ERROR: Kohana_Exception [ 0 ]: The MAR_NOME property does not exist in the Model_Categoria class ~ MODPATH\orm\classes\kohana\orm.php [ 573 ]
+2021-04-19 23:17:49 --- STRACE: Kohana_Exception [ 0 ]: The MAR_NOME property does not exist in the Model_Categoria class ~ MODPATH\orm\classes\kohana\orm.php [ 573 ]
+--
+#0 C:\xampp\htdocs\loja\application\classes\controller\ajax.php(35): Kohana_ORM->__get('MAR_NOME')
+#1 [internal function]: Controller_Ajax->action_cupons()
+#2 C:\xampp\htdocs\loja\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Ajax))
+#3 C:\xampp\htdocs\loja\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\loja\system\classes\kohana\request.php(1154): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#6 {main}
+2021-04-19 23:18:13 --- ERROR: Kohana_Exception [ 0 ]: The MAR_NOME property does not exist in the Model_Categoria class ~ MODPATH\orm\classes\kohana\orm.php [ 573 ]
+2021-04-19 23:18:13 --- STRACE: Kohana_Exception [ 0 ]: The MAR_NOME property does not exist in the Model_Categoria class ~ MODPATH\orm\classes\kohana\orm.php [ 573 ]
+--
+#0 C:\xampp\htdocs\loja\application\classes\controller\ajax.php(35): Kohana_ORM->__get('MAR_NOME')
+#1 [internal function]: Controller_Ajax->action_cupons()
+#2 C:\xampp\htdocs\loja\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Ajax))
+#3 C:\xampp\htdocs\loja\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\loja\system\classes\kohana\request.php(1154): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\loja\index.php(109): Kohana_Request->execute()
+#6 {main}

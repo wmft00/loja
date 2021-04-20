@@ -19,10 +19,6 @@ Class Model_Modulos extends ORM {
         'modulospermissoes' => array(
             'model'       => 'modulospermissoes',
             'foreign_key' => 'MOD_ID'
-        ),
-        'modulosfavoritos' => array(
-            'model'       => 'modulosfavoritos',
-            'foreign_key' => 'MOD_ID'
         )
     );
 

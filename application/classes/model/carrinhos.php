@@ -69,12 +69,6 @@ Class Model_Carrinhos extends ORM {
             CAR_VALOR_ITEM decimal(10,2) NOT NULL,
             CAR_TOTAL decimal(10,2) NOT NULL,
             CAR_DATA date NOT NULL,
-            CAR_FRETE decimal(10,2) NOT NULL default '0.00',
-            CAR_TIPOFRETE varchar(10) NOT NULL default 'PAC',
-            CAR_AVISADO set('S','N') NOT NULL default 'N',
-            CAR_CEP varchar(9) NOT NULL default '00000-000',
-            FOP_ID int(11) unsigned NOT NULL default '2',
-            COP_ID int(11) unsigned NOT NULL default '50',
             PRIMARY KEY  (CAR_SESSAO,PRO_ID),
             CONSTRAINT fk_carrinhospro FOREIGN KEY (PRO_ID) REFERENCES PRODUTOS(PRO_ID) ON DELETE RESTRICT ON UPDATE RESTRICT
           ) ENGINE=InnoDB DEFAULT CHARSET=latin1;");

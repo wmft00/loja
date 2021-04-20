@@ -57,9 +57,9 @@
                               ?>
                               <tr><td><?php echo $cup->CUP_ID; ?></td>
                                   <td><?php echo $cup->CUP_CODIGO; ?></td>
-                                  <td><?php echo $cup->CUP_TIPO; ?></td>
-                                  <td><?php echo $cup->marca->MAR_NOME; ?></td>
-                                  <td><?php echo $cup->categoria->CAT_NOME; ?></td>
+                                  <td><?php echo $cup->CUP_TIPO == 'P' ? "Porcentagem" : "Valor Fixo"; ?></td>
+                                  <td><?php echo $cup->marca->MAR_NOME == '' ? "Sem marca definida" : $cup->marca->MAR_NOME; ?></td>
+                                  <td><?php echo $cup->categoria->CAT_NOME == '' ? "Sem marca categoria" : $cup->categoria->CAT_NOME; ?></td>
                                   <td>
                                       <a href="<?php echo url::base() ?>cupons/edit/<?php echo $cup->CUP_ID; ?>" 
                                           class="btn-app-list fa fa-edit"></a>

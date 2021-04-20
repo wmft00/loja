@@ -49,8 +49,10 @@ class Controller_Index extends Controller_Template {
         }
 
         //SELECIONA O VALOR DO CARRINHO DA CRIANÇA
-        $total = ORM::factory("carrinhos")->selectSUM(Session::instance()->get('carrinho'.$this->commerceSession));
-        $this->template->valorTotal = $total[0]["total"];
+        $quantidade = ORM::factory("carrinhos")
+        ->selectSUMqnt(Session::instance()->get('carrinho'.$this->commerceSession));
+        $this->template->quantidadeTotal = $quantidade[0]["qnt"];
+        
         
         //INICIA A CACHECONTROLLER
         $this->cacheController = rand(0, 1000);
@@ -77,10 +79,26 @@ class Controller_Index extends Controller_Template {
 
         /*VARIÁVEIS DE CONTROLE*/
         $view->cacheController = $this->cacheController;
+
+        $view->produtos = ORM::factory('produtos')->where('PRO_ATIVO','=','S')->order_by('PRO_NOME','ASC')->find_all();
         /*FIM VARIÁVEIS DE CONTROLE*/
 
         $this->template->conteudo = $view;
     }
+
+    //FUNÇÃO QUE ARRUMA TITULOS PARA URL
+    public static function arrumaURL($txt) {
+        $txt = str_replace("?", "", $txt);
+        $txt = str_replace(",", "", $txt);
+        $txt = str_replace(";", "", $txt);
+        $txt = str_replace("&", "", $txt);
+        $txt = str_replace("/", "", $txt);
+        $txt = str_replace(".", "", $txt);
+        $txt = str_replace("(", "", $txt);
+        $txt = str_replace(")", "", $txt);
+        return str_replace("+", "-", urlencode(trim(strip_tags($txt))));
+    }
+    
 
     public static function ddmmaaaa_aaaammdd($dd_mm_aaaa) {
         $axdia = substr($dd_mm_aaaa, 0, 2);
