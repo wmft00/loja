@@ -118,14 +118,12 @@ class Controller_Cupons extends Controller_Index {
 
             //INSERE
             foreach($this->request->post() as $campo => $value){
-                if ($campo == 'MAR_ID'){
-                    $value = $value == '' ? NULL : $value;
-                    $cupons->$campo = $value;
-                } else if ($campo == 'CAT_ID'){
-                    $value = $value == '' ? NULL : $value;
-                    $cupons->$campo = $value;
+                if ($campo == 'MAR_ID' and $value == ""){
+                    $chamados->$campo = NULL;
+                } else if ($campo == 'CAT_ID' and $value == ""){
+                    $chamados->$campo = NULL;
                 } else {
-                    $cupons->$campo = $value;
+                    $cupons->$campo = strtoupper($value);
                 }
             }
             
@@ -145,14 +143,12 @@ class Controller_Cupons extends Controller_Index {
             if ($cupons->loaded()){
                 //ALTERA
                 foreach($this->request->post() as $campo => $value){
-                    if ($campo == 'MAR_ID'){
-                        $value = $value == '' ? NULL : $value;
-                        $cupons->$campo = $value;
-                    } else if ($campo == 'CAT_ID'){
-                        $value = $value == '' ? NULL : $value;
-                        $cupons->$campo = $value;
+                    if ($campo == 'MAR_ID' and $value == ""){
+                        $chamados->$campo = NULL;
+                    } else if ($campo == 'CAT_ID' and $value == ""){
+                        $chamados->$campo = NULL;
                     } else {
-                        $cupons->$campo = $value;
+                        $cupons->$campo = strtoupper($value);
                     }
                 }
                 

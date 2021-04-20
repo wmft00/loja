@@ -30,7 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               page. However, you can choose any other skin. Make sure you
               apply the skin class to the body tag so the changes take effect.
         -->
-        <link rel="stylesheet" href="<?php echo url::base(); ?>dist/css/skins/skin-blue.min.css">
+        <link rel="stylesheet" href="<?php echo url::base(); ?>dist/css/skins/skin-purple.min.css">
         
         <script type="text/javascript">
             var URLBASE = "<?php echo url::base() ?>";
@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-purple sidebar-mini">
         <div class="wrapper">
 
             <!-- Main Header -->
