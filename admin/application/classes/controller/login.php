@@ -93,7 +93,7 @@ class Controller_Login extends Controller_Template {
             //USUÁRIO DEFAULT admin. SENHA: adminteste
             Database::instance()->query(Database::INSERT, "INSERT INTO `USUARIOS` (`USU_ID`, `PER_ID`, `USU_NOME`, `USU_EMAIL`, `USU_LOGIN`, `USU_SENHA`, 
             `USU_DATA_CADASTRO`) VALUES 
-(1, 1, 'admin', 'admin@admin.com.br', 'admin', '6b28c000c2b8426877fa533f85b795a6', '".date("Y-m-d")."');");
+(1, 1, 'admin', 'admin@admin.com.br', 'admin', '314d8a8b0677eb982e2ac37507f7a664', '".date("Y-m-d")."');");
         }
 
         Database::instance()->query(Database::INSERT, "CREATE TABLE IF NOT EXISTS `MODULOS_PERMISSOES` (
